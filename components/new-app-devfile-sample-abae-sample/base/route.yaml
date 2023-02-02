@@ -1,0 +1,23 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: new-app-devfile-sample-abae-sample
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: new-app-devfile-sample-abae-sample
+    app.kubernetes.io/part-of: new-app
+  name: new-app-devfile-sample-abae-sample
+  namespace: sbudhwar-1-tenant
+spec:
+  port:
+    targetPort: 3001
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: new-app-devfile-sample-abae-sample
+    weight: 100
+status: {}
