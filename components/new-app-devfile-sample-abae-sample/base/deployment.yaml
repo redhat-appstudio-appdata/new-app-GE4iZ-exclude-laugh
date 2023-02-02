@@ -23,7 +23,7 @@ spec:
         app.kubernetes.io/instance: new-app-devfile-sample-abae-sample
     spec:
       containers:
-      - image: quay.io/redhat-appstudio/user-workload:sbudhwar-1-tenant-new-app-devfile-sample-abae-sample
+      - image: quay.io/redhat-appstudio/user-workload@sha256:8f3722d421fda3defab38cd5685e31fe117cab5dbf2cb1b29e47f74ee7d747ad
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
