@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: new-app-devfile-sample-abae-sample
+  namespace: sbudhwar-1-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: env
+          value: development
+        image: quay.io/redhat-appstudio/user-workload@sha256:8f3722d421fda3defab38cd5685e31fe117cab5dbf2cb1b29e47f74ee7d747ad
+        name: container-image
+        resources: {}
+status: {}
