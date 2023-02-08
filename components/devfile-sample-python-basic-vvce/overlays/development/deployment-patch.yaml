@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: devfile-sample-python-basic-vvce
+  namespace: sbudhwar-1-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: env
+          value: development
+        image: quay.io/redhat-appstudio/user-workload:sbudhwar-1-tenant-devfile-sample-python-basic-vvce
+        name: container-image
+        resources: {}
+status: {}
