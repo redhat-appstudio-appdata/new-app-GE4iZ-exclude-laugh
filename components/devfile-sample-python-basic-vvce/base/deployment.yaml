@@ -23,7 +23,7 @@ spec:
         app.kubernetes.io/instance: devfile-sample-python-basic-vvce
     spec:
       containers:
-      - image: quay.io/redhat-appstudio/user-workload:sbudhwar-1-tenant-devfile-sample-python-basic-vvce
+      - image: quay.io/redhat-appstudio/user-workload@sha256:c52e707448c7b07b16961d89fcfa3113c7980a88f188b6d02eead7a438f4c58c
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
