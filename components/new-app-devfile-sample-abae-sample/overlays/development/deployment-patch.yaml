@@ -16,7 +16,7 @@ spec:
       - env:
         - name: env
           value: development
-        image: quay.io/redhat-appstudio/user-workload@sha256:e504be911953f15959290b5d1f523d8314663529576468b92d3360896d22da55
+        image: quay.io/redhat-appstudio/user-workload@sha256:8f3722d421fda3defab38cd5685e31fe117cab5dbf2cb1b29e47f74ee7d747ad
         name: container-image
         resources: {}
 status: {}
