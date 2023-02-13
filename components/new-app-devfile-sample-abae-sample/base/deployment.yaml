@@ -23,7 +23,7 @@ spec:
         app.kubernetes.io/instance: new-app-devfile-sample-abae-sample
     spec:
       containers:
-      - image: quay.io/redhat-appstudio/user-workload@sha256:e504be911953f15959290b5d1f523d8314663529576468b92d3360896d22da55
+      - image: quay.io/redhat-appstudio/user-workload@sha256:8f3722d421fda3defab38cd5685e31fe117cab5dbf2cb1b29e47f74ee7d747ad
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
@@ -40,6 +40,9 @@ spec:
           tcpSocket:
             port: 3001
         resources:
+          limits:
+            cpu: "1"
+            memory: 512Mi
           requests:
             cpu: 10m
             memory: 50Mi
